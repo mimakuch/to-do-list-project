@@ -83,3 +83,12 @@ form button:hover {
 .complete-btn {
     background: hsl(76, 37%, 61%);
 }
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}

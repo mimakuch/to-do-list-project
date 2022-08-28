@@ -46,3 +46,40 @@ form button:hover {
     background: #f3e9dc;
     color: #895737;
 }
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    background: #f3e9dc;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.delete-btn, .complete-btn {
+    background: #895737;
+    color: #f3e9dc;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: hsl(76, 37%, 61%);
+}

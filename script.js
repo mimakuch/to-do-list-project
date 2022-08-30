@@ -43,7 +43,11 @@ function manageTodo(e) {
     // Delete TODO
     if (item.classList[0] === 'delete-btn') {
         const todo = item.parentElement;
-        todo.remove();
+        //Animation
+        todo.classList.add('fall');
+        todo.addEventListener("transitionend", function() {
+            todo.remove();
+        });
     }
 
     // Complete CHECK MARK

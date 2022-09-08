@@ -2,7 +2,7 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-btn');
 const todoList = document.querySelector('.todo-list');
-const filterOption = document.querySelector('filter-todo');
+const filterOption = document.querySelector('.filter-todo');
 
 
 // Event listeners
@@ -82,5 +82,17 @@ function filterTodo(e) {
                 }
                 break;
         }
-    })
+    });
+}
+
+function saveLocalTodos(todo) {
+    //Check if something is already in local storage
+    let todos;
+    if (localStorage.getItem('todos') === null) {
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
